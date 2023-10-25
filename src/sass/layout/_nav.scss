@@ -1,0 +1,15 @@
+@use '../utils/colors' as *;
+
+.burger-btn {
+	position: absolute;
+}
+
+.navbar {
+	position: fixed;
+	z-index: 1;
+
+	&__brand {
+		text-decoration: none;
+		font-size: 2rem;
+	}
+}

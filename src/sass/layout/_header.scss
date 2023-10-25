@@ -1,0 +1,27 @@
+@use './utils/colors' as *;
+
+.header {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100vh;
+	text-align: center;
+	padding: 2em;
+	color: $pure-white;
+	background-image: $hero-img-shadow, url(../img/jungle-small.jpg);
+	background-size: cover;
+	background-position: 40%;
+	background-attachment: fixed;
+
+	&__title {
+		font-family: 'Raleway', sans-serif;
+		font-size: 4.6rem;
+	}
+
+	&__text {
+		font-size: 1.8rem;
+		margin-bottom: 0.5em;
+	}
+}
