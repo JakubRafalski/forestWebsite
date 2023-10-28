@@ -10,7 +10,6 @@ const sourcemaps = require('gulp-sourcemaps');
 const clean = require('gulp-clean');
 const kit = require('gulp-kit');
 const browserSync = require('browser-sync').create();
-const svgSprite = require('gulp-svg-sprite');
 
 const reload = browserSync.reload;
 
@@ -55,16 +54,8 @@ function convertImages(done) {
 	done();
 }
 
-function svgCompiler(done) {
-	const config = {
-		mode: {
-			symbol: {
-				sprite: 'sprite.svg',
-			},
-		},
-	};
-
-	src(paths.icons).pipe(svgSprite(config)).pipe(dest(paths.svgDest));
+function copySvg(done) {
+	src(paths.icons).pipe(dest(paths.svgDest));
 	done();
 }
 
@@ -93,7 +84,7 @@ function watchForChanges(done) {
 	watch(
 		[paths.html, paths.sass, paths.js],
 		parallel(handleKits, sassCompiler, javaScript)
-	).on('change', reload); //
+	).on('change', reload); 
 	watch(paths.img, convertImages).on('change', reload);
 	done();
 }
@@ -103,7 +94,7 @@ const mainFunctions = parallel(
 	sassCompiler,
 	javaScript,
 	convertImages,
-	svgCompiler
+	copySvg
 );
 exports.cleanStuff = cleanStuff;
 exports.default = series(mainFunctions, startBrowserSync, watchForChanges);

@@ -1,15 +1,123 @@
 @use '../utils/colors' as *;
+@use '../components/wrapper' as *;
 
-.burger-btn {
-	position: absolute;
+.nav {
+	// ------------------------------ MOBILE NAV --------------------------
+	&-mobile {
+		position: fixed;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		z-index: 10;
+		padding: 0 0.5em 0 1em;
+		width: 100%;
+		height: 85px;
+		background-color: $pure-white;
+
+		&__brand {
+			display: flex;
+			font-size: 3.4rem;
+			text-decoration: none;
+			color: $main-dark;
+
+			&-logo {
+				width: 23px;
+				margin-right: 0.2em;
+			}
+		}
+	}
+
+	&-items {
+		position: fixed;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		padding: 2em;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		z-index: 5;
+		background-color: $pure-white;
+		transform: translateX(100%);
+		transition: transform 0.5s;
+	}
+
+	.active {
+		transform: translateX(0%);
+	}
+
+	&-item {
+		position: relative;
+		margin-bottom: 1em;
+		font-size: 3.2rem;
+
+		color: $main-dark;
+		text-decoration: none;
+		transition: color 0.3s;
+
+		&::before {
+			display: block;
+			position: absolute;
+			z-index: -1;
+			bottom: -20%;
+			left: -20%;
+			width: 140%;
+			height: 140%;
+			background-color: $main-dark;
+			transition: width 0.3s;
+			opacity: 0;
+			content: '';
+		}
+
+		&:hover::before {
+			opacity: 1;
+		}
+		&:hover {
+			color: $pure-white;
+		}
+	}
+
+	// ------------------------------ DESKTOP NAV --------------------------
+
+	&-desktop {
+		position: fixed;
+		display: none;
+		z-index: 10;
+		justify-content: space-between;
+		align-items: center;
+		background-color: $pure-white;
+		width: 100%;
+		height: 85px;
+		padding: 0 2em 0 3em;
+
+		.nav-item__desktop {
+			font-size: 1.8rem;
+			text-decoration: none;
+			padding: 1em;
+			color: $main-dark;
+
+		}
+	}
 }
 
-.navbar {
-	position: fixed;
-	z-index: 1;
+@media (min-width: 768px) {
+	.nav {
+		&-mobile {
+			padding: 0 1.5em 0 2em;
+		}
+	}
+}
 
-	&__brand {
-		text-decoration: none;
-		font-size: 2rem;
+@media (min-width: 992px) {
+	.nav {
+		&-mobile {
+			display: none;
+		}
+
+		&-desktop {
+			display: flex;
+		}
 	}
 }
