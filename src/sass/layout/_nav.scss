@@ -2,17 +2,20 @@
 @use '../components/wrapper' as *;
 
 .nav {
-	// ------------------------------ MOBILE NAV --------------------------
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	width: 100%;
+	height: 5.2em;
+	background-color: $pure-white;
+
 	&-mobile {
-		position: fixed;
 		display: flex;
+		width: 100%;
+		height: 100%;
+		padding: 0 0.5em 0 1em;
 		justify-content: space-between;
 		align-items: center;
-		z-index: 10;
-		padding: 0 0.5em 0 1em;
-		width: 100%;
-		height: 85px;
-		background-color: $pure-white;
 
 		&__brand {
 			display: flex;
@@ -38,21 +41,16 @@
 		left: 0px;
 		width: 100%;
 		height: 100%;
-		z-index: 5;
+		z-index: -1;
 		background-color: $pure-white;
 		transform: translateX(100%);
 		transition: transform 0.5s;
-	}
-
-	.active {
-		transform: translateX(0%);
 	}
 
 	&-item {
 		position: relative;
 		margin-bottom: 1em;
 		font-size: 3.2rem;
-
 		color: $main-dark;
 		text-decoration: none;
 		transition: color 0.3s;
@@ -61,10 +59,10 @@
 			display: block;
 			position: absolute;
 			z-index: -1;
-			bottom: -20%;
+			bottom: -30%;
 			left: -20%;
 			width: 140%;
-			height: 140%;
+			height: 160%;
 			background-color: $main-dark;
 			transition: width 0.3s;
 			opacity: 0;
@@ -79,25 +77,32 @@
 		}
 	}
 
-	// ------------------------------ DESKTOP NAV --------------------------
+	.active {
+		transform: translateX(0%);
+	}
 
 	&-desktop {
-		position: fixed;
 		display: none;
-		z-index: 10;
+		font-size: 0;
+		padding: 0 24px 0 32px;
+		width: 100%;
+		height: 100%;
 		justify-content: space-between;
 		align-items: center;
-		background-color: $pure-white;
-		width: 100%;
-		height: 85px;
-		padding: 0 2em 0 3em;
+		overflow: hidden;
+	}
 
-		.nav-item__desktop {
-			font-size: 1.8rem;
-			text-decoration: none;
-			padding: 1em;
-			color: $main-dark;
+	.nav-item__desktop {
+		font-size: 1.8rem;
+		text-decoration: none;
+		padding: 3em 2em;
+		margin: 0;
+		color: $main-dark;
+		transition: all 0.3s;
 
+		&:hover {
+			background-color: $main-dark;
+			color: $pure-white;
 		}
 	}
 }
@@ -106,6 +111,10 @@
 	.nav {
 		&-mobile {
 			padding: 0 1.5em 0 2em;
+		}
+
+		&-item {
+			font-size: 4.4rem;
 		}
 	}
 }

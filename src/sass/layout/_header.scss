@@ -12,28 +12,54 @@
 	color: $pure-white;
 	background-image: $hero-img-shadow, url(../img/jungle-small.jpg);
 	background-size: cover;
-	background-position: 70%;
+	background-position: center;
 	background-attachment: fixed;
 
-	&__title {
-		font-family: 'Raleway', sans-serif;
-		font-size: 3.6rem;
-	}
+	&__box {
+		&-title {
+			font-family: 'Raleway', sans-serif;
+			font-size: 3.6rem;
+		}
 
-	&__text {
-		font-size: 1.6rem;
-		margin-bottom: 0.5em;
+		&-text {
+			font-size: 1.6rem;
+			margin-bottom: 0.5em;
+		}
 	}
 }
 
 @media (min-width: 768px) {
 	.header {
-		&__title {
-			font-size: 4.6rem;
-		}
+		align-items: start;
+		height: 50vh;
+		text-align: left;
+		padding: 3.5em;
+		background-position: center;
+		&__box {
+			&-title {
+				font-size: 4.2rem;
+			}
 
-		&__text {
-			font-size: 2rem;
+			&-text {
+				font-size: 2rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.header {
+		height: 50vh;
+		background-image: $hero-img-shadow, url(../img/jungle-big.jpg);
+		background-position: center 190%;
+		&__box {
+			&-title {
+				font-size: 4.6rem;
+			}
+
+			&-text {
+				font-size: 2.6rem;
+			}
 		}
 	}
 }
