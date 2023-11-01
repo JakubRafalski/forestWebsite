@@ -130,3 +130,12 @@
 		}
 	}
 }
+
+@media (min-width: 1200px) {
+	.nav {
+		&-desktop {
+			display: flex;
+			padding: 0;
+		}
+	}
+}

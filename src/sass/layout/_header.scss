@@ -6,23 +6,22 @@
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	height: 100vh;
-	text-align: center;
-	padding: 2em;
+	height: 60vh;
+	text-align: left;
+	padding: 5.2em 2em 2em 2em;
 	color: $pure-white;
 	background-image: $hero-img-shadow, url(../img/jungle-small.jpg);
 	background-size: cover;
 	background-position: center;
-	background-attachment: fixed;
 
 	&__box {
 		&-title {
 			font-family: 'Raleway', sans-serif;
-			font-size: 3.6rem;
+			font-size: 2.2rem;
 		}
 
 		&-text {
-			font-size: 1.6rem;
+			font-size: 1.4rem;
 			margin-bottom: 0.5em;
 		}
 	}
@@ -30,14 +29,15 @@
 
 @media (min-width: 768px) {
 	.header {
+		background-image: $hero-img-shadow, url(../img/jungle-big.jpg);
 		align-items: start;
-		height: 50vh;
+		height: 55vh;
 		text-align: left;
-		padding: 3.5em;
+		padding: 5.2em 3.5em 3.5em 3.5em;
 		background-position: center;
 		&__box {
 			&-title {
-				font-size: 4.2rem;
+				font-size: 3rem;
 			}
 
 			&-text {
@@ -49,16 +49,18 @@
 
 @media (min-width: 992px) {
 	.header {
-		height: 50vh;
-		background-image: $hero-img-shadow, url(../img/jungle-big.jpg);
-		background-position: center 190%;
+		height: 55vh;
+		background-position: center 65%;
+		
+	
+
 		&__box {
 			&-title {
-				font-size: 4.6rem;
+				font-size: 4rem;
 			}
 
 			&-text {
-				font-size: 2.6rem;
+				font-size: 2.2rem;
 			}
 		}
 	}

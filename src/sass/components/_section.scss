@@ -1,0 +1,17 @@
+.section {
+	padding: 3em 2em;
+}
+
+@media (min-width: 768px) {
+    .section {
+        padding: 5em 2em;
+    }
+    
+}
+
+// @media (min-width: 992px) {
+//     .section {
+//         padding: 6em 2em;
+//     }
+    
+// }
