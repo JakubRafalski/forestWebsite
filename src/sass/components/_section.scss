@@ -3,15 +3,13 @@
 }
 
 @media (min-width: 768px) {
-    .section {
-        padding: 5em 2em;
-    }
-    
+	.section {
+		padding: 4em 2em;
+	}
 }
 
-// @media (min-width: 992px) {
-//     .section {
-//         padding: 6em 2em;
-//     }
-    
-// }
+@media (min-width: 1600px) {
+	.section {
+		padding: 5em 2em;
+	}
+}
