@@ -1,1 +1,1 @@
-const menuItems = document.querySelector("")
+// const menuItems = document.querySelector("")

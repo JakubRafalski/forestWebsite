@@ -1,18 +1,19 @@
 let burgerBtn;
 let navItems;
 let navItem;
-// let date;
+let date;
 
 const main = () => {
 	prepareDOMElements();
 	prepareDOMEvents();
+	showYear();
 };
 
 const prepareDOMElements = () => {
 	burgerBtn = document.querySelector('.hamburger');
 	navItems = document.querySelector('.nav__mobile-items');
 	navItem = document.querySelector('.nav__mobile-item');
-	// date = document.querySelector('.date');
+	date = document.querySelector('.date');
 };
 const prepareDOMEvents = () => {
 	navItem.addEventListener('click', hideList);
@@ -28,11 +29,9 @@ const hideList = () => {
 	navItems.classList.remove('active');
 };
 
-// const showYear = () => {
-// 	date.textContent = '2023';
-// 	console.log('Hello');
-// };
-
-// showYear();
+const showYear = () => {
+	const year = new Date().getFullYear();
+	date.textContent = year;
+};
 
 document.addEventListener('DOMContentLoaded', main);

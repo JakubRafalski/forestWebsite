@@ -64,12 +64,28 @@
 			box-shadow: 0px 0px 10px rgba($color: #000000, $alpha: 0.4);
 			text-align: center;
 			border-radius: 8px;
+			background-color: $pure-white;
 			transition: background-color 0.3s, color 0.3s;
 			cursor: pointer;
 
 			&:hover {
 				background-color: $main-dark;
 				color: $pure-white;
+			}
+
+			&--popular {
+				padding: 0.7em 1.4em;
+				width: 80%;
+				background-color: $green;
+				box-shadow: 0px 0px 10px $green;
+				text-align: center;
+				border-radius: 8px;
+				transition: background-color 0.3s, color 0.3s;
+				cursor: pointer;
+
+				&:hover {
+					background-color: $green-hover;
+				}
 			}
 		}
 	}
@@ -90,7 +106,7 @@
 				width: 110%;
 				height: 2px;
 				background-color: $green;
-				transition: height .3s;
+				transition: height 0.3s;
 			}
 
 			&:hover::before {
@@ -105,15 +121,6 @@
 
 	.active {
 		color: $green;
-	}
-
-	.popular {
-		background-color: $green;
-		box-shadow: 0px 0px 10px $green;
-
-		&:hover {
-			background-color: $green-hover;
-		}
 	}
 }
 
