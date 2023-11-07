@@ -5,9 +5,13 @@
 @use './layout/nav' as *;
 @use './layout/header' as *;
 @use './layout/about-us' as *;
+@use './layout/title' as *;
+@use './layout/offer' as *;
+@use './layout/footer' as *;
 
 
 @use './components/hamburger' as *;
 @use './components/section' as *;
 @use './components/section-title' as *;
 @use './components/wrapper' as *;
+

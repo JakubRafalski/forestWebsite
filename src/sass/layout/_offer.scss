@@ -1,0 +1,158 @@
+@use '../utils/colors' as *;
+
+.offer {
+	&__subtitle {
+		text-align: center;
+		margin-bottom: 2em;
+		font-size: 1.8rem;
+	}
+
+	&__cards {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 3em;
+	}
+
+	&__card {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 2.5em;
+		padding: 2em 1em;
+		width: 100%;
+		border: transparent;
+		border-radius: 8px;
+		box-shadow: 0px 0px 10px rgba($color: #000000, $alpha: 0.4);
+		transition: scale 0.3s, background-color 0.3s;
+
+		&:hover {
+			background-color: $light-white;
+			scale: 0.97;
+		}
+
+		&-title {
+			font-size: 2.8rem;
+			margin-bottom: 1rem;
+		}
+
+		&-price {
+			font-size: 4.2rem;
+			font-weight: 600;
+			margin-bottom: 0.5em;
+		}
+
+		ul {
+			list-style: none;
+			margin-bottom: 2em;
+		}
+
+		&-element {
+			margin-bottom: 0.5em;
+			font-size: 1.4rem;
+
+			i {
+				margin-right: 0.2em;
+			}
+		}
+
+		&-button {
+			padding: 0.7em 1.4em;
+			width: 80%;
+			box-shadow: 0px 0px 10px rgba($color: #000000, $alpha: 0.4);
+			text-align: center;
+			border-radius: 8px;
+			transition: background-color 0.3s, color 0.3s;
+			cursor: pointer;
+
+			&:hover {
+				background-color: $main-dark;
+				color: $pure-white;
+			}
+		}
+	}
+
+	&__more-info {
+		text-align: center;
+
+		&--link {
+			position: relative;
+			text-decoration: none;
+
+			&::before {
+				content: '';
+				position: absolute;
+				z-index: -1;
+				bottom: -5%;
+				left: -5%;
+				width: 110%;
+				height: 2px;
+				background-color: $green;
+				transition: height .3s;
+			}
+
+			&:hover::before {
+				height: 110%;
+			}
+		}
+	}
+
+	.no-active {
+		color: $secondary-dark;
+	}
+
+	.active {
+		color: $green;
+	}
+
+	.popular {
+		background-color: $green;
+		box-shadow: 0px 0px 10px $green;
+
+		&:hover {
+			background-color: $green-hover;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.offer {
+		&__cards {
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+
+		&__card {
+			width: 40%;
+			margin: 1em 1em;
+
+			&-element {
+				margin-bottom: 0.5em;
+				font-size: 1.6rem;
+
+				i {
+					margin-right: 0.2em;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.offer {
+		&__subtitle {
+			margin-bottom: 3em;
+		}
+
+		&__cards {
+			flex-direction: row;
+		}
+
+		&__card {
+			width: 25%;
+			margin: 0 1em;
+		}
+	}
+}

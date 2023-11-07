@@ -1,0 +1,49 @@
+@use './utils/colors' as *;
+
+.title {
+	padding: 3em 2em;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: $img-shadow, url(../img/girl-small.jpg);
+	background-size: cover;
+	background-position: center;
+
+	h2 {
+		color: $pure-white;
+		font-size: 2.4rem;
+		padding: 1em 2em;
+		text-align: center;
+		font-weight: 400;
+		border: 1px solid $pure-white;
+	}
+}
+
+@media (min-width: 768px) {
+	.title {
+		padding: 4em 2em;
+		h2 {
+			font-size: 3rem;
+			font-weight: 600;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.title {
+		padding: 8em 2em;
+		background-image: $img-shadow, url(../img/girl-big.jpg);
+
+		&__info {
+			h2 {
+				font-size: 3.6rem;
+				padding: 1em 5em;
+			}
+		}
+	}
+}

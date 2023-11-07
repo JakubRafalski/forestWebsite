@@ -1,8 +1,14 @@
 $pure-white: rgb(255, 255, 255);
 $light-white: rgb(245, 245, 245);
+$dark-white: rgb(235, 235, 235);
 $main-dark: rgb(0, 0, 0);
 $secondary-dark: rgb(125, 125, 125);
-$green: rgb(14, 219, 14);
+$green: rgb(121, 255, 94);
+$green-hover: rgb(104, 223, 81);
 
-$hero-img-shadow: linear-gradient(45deg, rgba(0, 0, 0, .7),rgba(0, 0, 0, .6));
-
+$hero-img-shadow: linear-gradient(
+	40deg,
+	rgba(0, 0, 0, 0.55),
+	rgba(0, 0, 0, 0.55)
+);
+$img-shadow: linear-gradient(40deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.35));

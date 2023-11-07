@@ -1,0 +1,117 @@
+@use '../utils/colors' as *;
+
+.footer {
+	background-color: $dark-white;
+
+	&__boxes {
+		padding: 2em;
+	}
+
+	&__box {
+		margin-bottom: 1.5em;
+
+		&-logo {
+			font-size: 3.6rem;
+			text-decoration: none;
+			color: $main-dark;
+		}
+
+		&-img {
+			width: 25px;
+		}
+	}
+
+	&__box-info {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 1em;
+
+		&-title {
+			font-size: 2rem;
+			margin-bottom: 0.5em;
+		}
+
+		&-element {
+			font-size: 1.4rem;
+			color: $main-dark;
+			text-decoration: none;
+			margin: 0 0 0.5rem 0.5rem;
+		}
+	}
+
+	&__bottom-text {
+		padding: 2em;
+		text-align: center;
+	}
+}
+
+.footer__box-info:nth-child(4) {
+	margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+	.footer {
+		&__boxes {
+			display: flex;
+		}
+		&__box {
+			width: 50%;
+
+			&-logo {
+				font-size: 4rem;
+				text-decoration: none;
+				color: $main-dark;
+			}
+
+			&-img {
+				width: 28px;
+			}
+		}
+		&__box-info {
+			width: 25%;
+
+			&-title {
+				font-size: 2rem;
+				font-weight: 600;
+				margin-bottom: 0.5em;
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.footer {
+		&__boxes {
+			padding: 4em 2em;
+		}
+		&__box {
+			width: 50%;
+
+			&-logo {
+				font-size: 4.8rem;
+				text-decoration: none;
+				color: $main-dark;
+			}
+
+			&-img {
+				width: 30px;
+			}
+		}
+		&__box-info {
+			width: 25%;
+
+			&-title {
+				font-size: 2.4rem;
+				font-weight: 600;
+				margin-bottom: 1em;
+			}
+
+			&-element {
+				font-size: 1.6rem;
+				color: $main-dark;
+				text-decoration: none;
+				margin: 0 0 1em .5em;
+			}
+		}
+	}
+}
