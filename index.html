@@ -22,49 +22,36 @@
 <body class="main-page">
 
     <nav class="nav">
+    <div class="nav__box">
+        <div class="nav__brand">
+            <a class="nav__brand-logo" href="#"><img class="nav__brand-icon" src="./dist/img/icons/tree.svg" alt="">
+                Forest</a>
+        </div>
 
-    <div class="nav__mobile">
-        <a class="nav__mobile-logo" href="#home"><img class="nav__mobile-icon" src="./dist/img/icons/tree.svg" alt="">
-            Forest</a>
-
-        <button class="nav__mobile-hamburger hamburger hamburger--elastic" type="button">
+        <button class="nav__brand-hamburger hamburger hamburger--elastic" type="button">
             <span class="hamburger-box">
                 <span class="hamburger-inner"></span>
             </span>
         </button>
 
-    </div>
-
-    <div class="nav__mobile-items">
-        <a class="nav__mobile-item" href="index.html">Home</a>
-        <a class="nav__mobile-item" href="#about-us">O nas</a>
-        <a class="nav__mobile-item" href="#offer">Oferta</a>
-        <a class="nav__mobile-item" href="">Kontakt</a>
-    </div>
-
-
-    <div class="nav__desktop">
-        <a class="nav__mobile-logo" href="#home"><img class="nav__mobile-icon" src="./dist/img/icons/tree.svg" alt="">
-            Forest</a>
-        <div class="nav__desktop-items">
-            <a class="nav__item-desktop active-link" href="index.html">Home</a>
-            <a class="nav__item-desktop" href="#about-us">O nas</a>
-            <a class="nav__item-desktop" href="#offer">Oferta</a>
-            <a class="nav__item-desktop" href="">Kontakt</a>
+        <div class="nav__items">
+            <a class="nav__item active" href="index.html#home">Home</a>
+            <a class="nav__item" href="index.html#about-us">O nas</a>
+            <a class="nav__item" href="index.html#offer">Oferta</a>
+            <a class="nav__item" href="kontakt.html">Kontakt</a>
         </div>
     </div>
-
 </nav>
 
-    <header class="header" id="home">
+    <header class="header sec" id="home">
         <div class="header__box wrapper">
-            <p class="header__box-text">Forest Group</p>
-            <h1 class="header__box-title">Najpiękniejszy park w Twojej okolicy!</h1>
+                <p class="header__box-text">Forest Group</p>
+                <h1 class="header__box-title">Najpiękniejszy park w Twojej okolicy!</h1>
         </div>
     </header>
 
     <main class="main">
-        <section class="section about-us" id="about-us">
+        <section class="section about-us sec" id="about-us">
             <div class="wrapper">
                 <h2 class="section__heading">O nas</h2>
                 <div class="about-us__box">
@@ -95,7 +82,7 @@
 
         </section>
 
-        <section class="section offer" id="offer">
+        <section class="section offer sec" id="offer">
             <div class="wrapper">
                 <h2 class="section__heading">Oferta</h2>
 
@@ -157,8 +144,8 @@
                     </div>
                 </div>
 
-                <p class="offer__more-info">Jeśli potrzebujesz więcej informacji, serdecznie zachęcamy do odwiedzenia
-                    sekcji <a class="offer__more-info--link" href="offer.html">oferta...</a></p>
+                <p class="offer__more-info">Jeśli potrzebujesz więcej informacji odnośnie oferty, kliknij <a
+                        class="offer__more-info--link" href="oferta.html"><b>tutaj...</b></a></p>
             </div>
 
         </section>

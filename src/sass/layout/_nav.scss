@@ -5,143 +5,106 @@
 	position: fixed;
 	z-index: 100;
 	top: 0;
+	background-color: $pure-white;
 	width: 100%;
 	height: 5.2em;
-	background-color: $pure-white;
 
-	&__mobile {
+	&__box {
 		display: flex;
-		width: 100%;
-		height: 100%;
-		padding: 0 0.5em 0 1em;
 		justify-content: space-between;
 		align-items: center;
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 0.5em 0 1.5em;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
 	}
 
-	&__mobile-logo {
-		display: flex;
-		font-size: 3.4rem;
-		text-decoration: none;
-		color: $main-dark;
+	&__brand {
+		z-index: 10;
 	}
 
-	&__mobile-icon {
+	.hamburger {
+		z-index: 10;
+	}
+
+	&__brand-icon {
 		width: 23px;
 		margin-right: 0.2em;
 	}
 
-	&__mobile-items {
-		position: fixed;
+	&__brand-logo {
 		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		padding: 5em 2em 2em 2em;
-		top: 0px;
-		left: 0px;
-		width: 100%;
-		height: 100%;
-		z-index: -1;
-		background-color: $pure-white;
-		transform: translateX(100%);
-		transition: transform 0.5s;
+		font-size: 3.2rem;
+		text-decoration: none;
+		color: $main-dark;
 	}
 
-	&__mobile-item {
+	&__items {
+		position: fixed;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: $pure-white;
+		transform: translateX(100%);
+		transition: transform 0.3s;
+	}
+
+	&__item {
 		position: relative;
 		margin-bottom: 1em;
 		font-size: 3rem;
 		color: $main-dark;
 		text-decoration: none;
-		transition: color 0.3s;
-
-		&::before {
-			display: block;
-			position: absolute;
-			z-index: -1;
-			bottom: -30%;
-			left: -20%;
-			width: 140%;
-			height: 160%;
-			background-color: $main-dark;
-			transition: width 0.3s;
-			opacity: 0;
-			content: '';
-		}
-
-		&:hover::before {
-			opacity: 1;
-		}
-		&:hover {
-			color: $pure-white;
-		}
 	}
 
-	.active {
+	.active-nav {
 		transform: translateX(0%);
-	}
-
-	&__desktop {
-		display: none;
-		font-size: 0;
-		padding: 0 24px 0 32px;
-		max-width: 1200px;
-		width: 100%;
-		height: 100%;
-		margin: 0 auto;
-		justify-content: space-between;
-		align-items: center;
-		overflow: hidden;
-	}
-
-	.nav__item-desktop {
-		font-size: 1.8rem;
-		text-decoration: none;
-		padding: 3em 2em;
-		margin: 0;
-		color: $main-dark;
-		transition: all 0.3s;
-
-		&:hover {
-			background-color: $main-dark;
-			color: $pure-white;
-		}
-	}
-
-	.active-link {
-		background-color: $main-dark;
-		color: $pure-white;
-	}
-}
-
-@media (min-width: 768px) {
-	.nav {
-		&__mobile {
-			padding: 0 1.5em 0 2em;
-		}
-
-		&__mobile-item {
-			font-size: 4.4rem;
-		}
 	}
 }
 
 @media (min-width: 992px) {
 	.nav {
-		&__mobile {
+		.hamburger {
 			display: none;
 		}
 
-		&__desktop {
-			display: flex;
+		&__items {
+			position: relative;
+			display: block;
+			font-size: 0;
+			transform: translateX(0%);
+		}
+
+		&__item {
+			font-size: 1.8rem;
+			padding: 3em 2em;
+			text-decoration: none;
+			color: $main-dark;
+			transition: all 0.3s;
+
+			&:hover {
+				background-color: $main-dark;
+				color: $pure-white;
+			}
+		}
+
+		.active {
+			background-color: $main-dark;
+			color: $pure-white;
 		}
 	}
 }
 
 @media (min-width: 1200px) {
 	.nav {
-		&__desktop {
-			display: flex;
+		&__box {
 			padding: 0;
 		}
 	}

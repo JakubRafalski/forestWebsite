@@ -1,32 +1,18 @@
-let burgerBtn;
-let navItems;
-let navItem;
-let date;
-
-const main = () => {
-	prepareDOMElements();
-	prepareDOMEvents();
-	showYear();
-};
-
-const prepareDOMElements = () => {
-	burgerBtn = document.querySelector('.hamburger');
-	navItems = document.querySelector('.nav__mobile-items');
-	navItem = document.querySelector('.nav__mobile-item');
-	date = document.querySelector('.date');
-};
-const prepareDOMEvents = () => {
-	navItem.addEventListener('click', hideList);
-	burgerBtn.addEventListener('click', showList);
-};
+let burgerBtn = document.querySelector('.hamburger');
+let navBox = document.querySelector('.nav__items');
+let navItems = document.querySelectorAll('.nav__item');
+let date = document.querySelector('.date');
 
 const showList = () => {
-	navItems.classList.toggle('active');
+	navBox.classList.toggle('active-nav');
 	burgerBtn.classList.toggle('is-active');
-};
 
-const hideList = () => {
-	navItems.classList.remove('active');
+	navItems.forEach((item) => {
+		item.addEventListener('click', () => {
+			navBox.classList.remove('active-nav');
+			burgerBtn.classList.remove('is-active');
+		});
+	});
 };
 
 const showYear = () => {
@@ -34,4 +20,5 @@ const showYear = () => {
 	date.textContent = year;
 };
 
-document.addEventListener('DOMContentLoaded', main);
+showYear();
+burgerBtn.addEventListener('click', showList);
