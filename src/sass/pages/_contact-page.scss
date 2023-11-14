@@ -35,10 +35,20 @@
 		display: flex;
 	}
 	&__info {
-		margin-bottom: 2em;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		margin-bottom: 3em;
 		padding: 20px;
 		box-shadow: 0 0 5px black;
 		border-radius: 8px;
+		transition: transform 0.3s;
+
+		&:hover {
+			transform: scale(0.97);
+		}
 	}
 	&__info-icon {
 		font-size: 2.6rem;
@@ -69,7 +79,7 @@
 	}
 
 	&__title {
-		margin-bottom: .5em;
+		margin-bottom: 0.5em;
 		text-align: center;
 		font-size: 2rem;
 	}
@@ -135,20 +145,14 @@
 }
 
 @media (min-width: 768px) {
-	.contact {
-		display: flex;
-	}
-}
-
-@media (min-width: 992px) {
 	.header-contact {
 		&__box {
 			&-title {
-				font-size: 4rem;
+				font-size: 3.4rem;
 			}
 
 			&-text {
-				font-size: 2.2rem;
+				font-size: 2rem;
 				margin-bottom: 0.5em;
 			}
 		}
@@ -178,6 +182,21 @@
 		&__map-box {
 			margin-top: 2em;
 			width: 100%;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.header-contact {
+		&__box {
+			&-title {
+				font-size: 4rem;
+			}
+
+			&-text {
+				font-size: 2.2rem;
+				margin-bottom: 0.5em;
+			}
 		}
 	}
 }
