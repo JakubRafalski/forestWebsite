@@ -1,0 +1,391 @@
+@use '../utils/colors.scss' as *;
+
+.header-offer {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 60vh;
+	text-align: left;
+	padding: 5.2em 2em 2em 2em;
+	color: $pure-white;
+	background-image: $hero-img-shadow, url(../img/forest-small.jpg);
+	background-size: cover;
+	background-position: center;
+
+	&__box {
+		&-title {
+			font-family: 'Raleway', sans-serif;
+			font-size: 2.4rem;
+		}
+
+		&-text {
+			font-size: 1.4rem;
+			margin-bottom: 0.5em;
+		}
+	}
+}
+
+.about-offer {
+	&__box {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__img {
+		width: 100%;
+		margin-bottom: 1em;
+	}
+
+    &__box {
+        margin-bottom: 1.5em;
+    }
+
+	&__title {
+		margin-bottom: 1em;
+	}
+
+	&__text {
+		font-size: 1.4rem;
+		line-height: 1.4;
+
+        &-span {
+            display: none;
+        }
+	}
+}
+
+.achievements {
+	color: $pure-white;
+	background-image: $img-offer-shadow, url(../img/trees-big.jpg);
+	background-size: cover;
+	background-position: center;
+
+	&__box {
+		margin-bottom: 2em;
+		text-align: center;
+		transition: color 0.3s, transform 0.3s;
+
+		&:hover {
+			color: $dark-white;
+			transform: scale(0.95);
+		}
+	}
+
+	&__box-icon {
+		margin-bottom: 0.5em;
+	}
+
+	&__icon {
+		font-size: 3.2rem;
+	}
+
+	&__title {
+		font-size: 2rem;
+		font-weight: 600;
+		margin-bottom: 0.5em;
+	}
+
+	&__text {
+		font-size: 1.6rem;
+	}
+}
+
+.cards {
+	&__subtitle {
+		text-align: center;
+		margin-bottom: 2em;
+		font-size: 1.8rem;
+	}
+
+	&__cards {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 3em;
+	}
+
+	&__card {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 2.5em;
+		padding: 2em 1em;
+		width: 100%;
+		border: transparent;
+		border-radius: 8px;
+		box-shadow: 0px 0px 10px rgba($color: #000000, $alpha: 0.4);
+		transition: scale 0.3s, background-color 0.3s;
+
+		&:hover {
+			background-color: $light-white;
+			scale: 0.97;
+		}
+
+		&-title {
+			font-size: 2.8rem;
+			margin-bottom: 1rem;
+		}
+
+		&-price {
+			font-size: 4.2rem;
+			font-weight: 600;
+			margin-bottom: 0.5em;
+		}
+
+		ul {
+			list-style: none;
+			margin-bottom: 2em;
+		}
+
+		&-element {
+			margin-bottom: 0.5em;
+			font-size: 1.4rem;
+
+			i {
+				margin-right: 0.2em;
+			}
+		}
+
+		&-button {
+			padding: 0.7em 1.4em;
+			width: 80%;
+			box-shadow: 0px 0px 10px rgba($color: #000000, $alpha: 0.4);
+			text-align: center;
+			border-radius: 8px;
+			background-color: $pure-white;
+			transition: background-color 0.3s, color 0.3s;
+			cursor: pointer;
+
+			&:hover {
+				background-color: $main-dark;
+				color: $pure-white;
+			}
+
+			&--popular {
+				padding: 0.7em 1.4em;
+				width: 80%;
+				background-color: $green;
+				box-shadow: 0px 0px 10px $green;
+				text-align: center;
+				border-radius: 8px;
+				transition: background-color 0.3s, color 0.3s;
+				cursor: pointer;
+
+				&:hover {
+					background-color: $green-hover;
+					color: $pure-white;
+				}
+			}
+		}
+	}
+
+	&__more-info {
+		text-align: center;
+
+		&--link {
+			position: relative;
+			text-decoration: none;
+			color: $main-dark;
+
+			&::before {
+				content: '';
+				position: absolute;
+				z-index: -1;
+				bottom: -5%;
+				left: -5%;
+				width: 110%;
+				height: 2px;
+				background-color: $green;
+				transition: height 0.3s;
+			}
+
+			&:hover::before {
+				height: 110%;
+			}
+		}
+	}
+
+	.no-active {
+		color: $secondary-dark;
+	}
+
+	.active {
+		color: $green;
+	}
+}
+
+@media (min-width: 768px) {
+	.header-offer {
+		background-image: $hero-img-shadow, url(../img/forest-big.jpg);
+		align-items: start;
+		height: 55vh;
+		text-align: left;
+		padding: 5.2em 3.5em 3.5em 3.5em;
+		background-position: center;
+		&__box {
+			&-title {
+				font-size: 3rem;
+			}
+
+			&-text {
+				font-size: 2rem;
+			}
+		}
+	}
+
+	.about-offer {
+		&__box {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+            margin-bottom: 3em;
+
+            &--left {
+                text-align: right;
+            }
+
+			&-info {
+				width: 55%;
+        
+			}
+
+			&-img {
+				width: 40%;
+
+                &--left {
+                    order: 1;
+                }
+			}
+		}
+
+		&__text {
+			font-size: 1.6rem;
+		}
+	}
+
+	.achievements {
+		&__boxes {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		&__box {
+			width: 25%;
+		}
+
+		&__icon {
+			font-size: 3.8rem;
+		}
+
+		&__box-icon {
+			margin-bottom: 1em;
+		}
+	}
+
+	.cards {
+		&__cards {
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+
+		&__card {
+			width: 40%;
+			margin: 1em 1em;
+
+			&-element {
+				margin-bottom: 0.5em;
+				font-size: 1.6rem;
+
+				i {
+					margin-right: 0.2em;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.header-offer {
+		height: 55vh;
+		background-position: center 65%;
+
+		&__box {
+			&-title {
+				font-size: 4rem;
+			}
+
+			&-text {
+				font-size: 2.2rem;
+			}
+		}
+	}
+
+	.about-offer {
+		&__box {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: flex-start;
+
+			&-info {
+				width: 55%;
+			}
+
+			&-img {
+				width: 40%;
+			}
+		}
+
+		&__title {
+			font-size: 2.4rem;
+			margin-bottom: 1em;
+		}
+
+		&__text {
+			font-size: 1.8rem;
+			line-height: 1.8;
+		}
+
+        span {
+            display: inline;
+        }
+	}
+
+	.achievements {
+		.achievements {
+			&__title {
+				font-size: 2.2rem;
+			}
+
+			&__text {
+				font-size: 1.8rem;
+			}
+
+			&__box {
+				width: 35%;
+			}
+		}
+	}
+
+	.cards {
+		&__subtitle {
+            font-size: 2.4rem;
+			margin-bottom: 3em;
+		}
+
+		&__cards {
+			flex-direction: row;
+		}
+
+		&__card {
+			width: 25%;
+			margin: 0 1em;
+		}
+	}
+}

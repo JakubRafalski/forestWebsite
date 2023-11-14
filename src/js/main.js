@@ -15,6 +15,12 @@ const showList = () => {
 	});
 };
 
+const homeHighlighted = () => {
+	if (document.body.classList.contains('main-page')) {
+		navItems[0].classList.add('active');
+	}
+};
+
 const showYear = () => {
 	const year = new Date().getFullYear();
 	date.textContent = year;
@@ -22,3 +28,5 @@ const showYear = () => {
 
 showYear();
 burgerBtn.addEventListener('click', showList);
+window.addEventListener('load', homeHighlighted);
+

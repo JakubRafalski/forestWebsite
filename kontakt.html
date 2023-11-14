@@ -21,7 +21,7 @@
     <nav class="nav">
     <div class="nav__box">
         <div class="nav__brand">
-            <a class="nav__brand-logo" href="#"><img class="nav__brand-icon" src="./dist/img/icons/tree.svg" alt="">
+            <a class="nav__brand-logo" href="index.html#"><img class="nav__brand-icon" src="./dist/img/icons/tree.svg" alt="">
                 Forest</a>
         </div>
 
@@ -32,7 +32,7 @@
         </button>
 
         <div class="nav__items">
-            <a class="nav__item active" href="index.html#home">Home</a>
+            <a class="nav__item" href="index.html#home">Home</a>
             <a class="nav__item" href="index.html#about-us">O nas</a>
             <a class="nav__item" href="index.html#offer">Oferta</a>
             <a class="nav__item" href="kontakt.html">Kontakt</a>
@@ -40,12 +40,126 @@
     </div>
 </nav>
 
-    <header class="header sec" id="home">
-        <div class="header__box wrapper">
-            <p class="header__box-text">Forest Group</p>
-            <h1 class="header__box-title">Skontaktuj się z nami!</h1>
+    <header class="header-contact" id="home-contact">
+        <div class="header-contact__box wrapper">
+            <p class="header-contact__box-text">Forest Group</p>
+            <h1 class="header-contact__box-title">Skontaktuj się z nami</h1>
         </div>
     </header>
+
+    <main>
+        <section class="section contact" id="contact">
+
+            <div class="contact__box">
+
+                <div class="contact__info">
+                    <i class="contact__info-icon fa-solid fa-location-dot"></i>
+                    <h3 class="contact__title">Lokalizacja</h3>
+                    <p class="contact__info-text">Forest Group</p>
+                    <p class="contact__info-text">ul. Jasnogórska 2 </p>
+                    <p class="contact__info-text contact__info-text--last">Kraków</p>
+                    <i class="contact__info-icon fa-solid fa-phone"></i>
+                    <h3 class="contact__title">Kontakt</h3>
+                    <p class="contact__info-text contact__info-text--last">+48 500 500 500</p>
+                    <i class="contact__info-icon fa-solid fa-clock"></i>
+                    <h3 class="contact__title">Godziny otwarcia</h3>
+                    <p class="contact__info-text">Poniedziałek - Piątek: 8:00 - 22:00</p>
+                    <p class="contact__info-text contact__info-text--last">Sobota - Niedziela: 10:00 - 18:00</p>
+                </div>
+
+                <form class="contact__form">
+                    <label class="contact__label" for="name">Imię i nazwisko:</label>
+                    <input class="contact__input" type="text" id="name">
+                    <label class="contact__label" for="email">Adres e-mail:</label>
+                    <input class="contact__input" type="email" id="email">
+                    <label class="contact__label" for="message">Wiadomosć:</label>
+                    <textarea class="contact__textarea" name="" id="message"></textarea>
+
+                    <p class="contact__policy-text"><input class="contact__checkbox" type="checkbox"> Akceptuję
+                        regulamin i politykę prywatności przetwarzania moich danych osobowych. </p>
+                    <div class="contact__button">Wyślij</div>
+                </form>
+
+
+                <div class="contact__map-box">
+                    <iframe class="contact__map"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.8982339277354!2d19.890269276528198!3d50.08819217152528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165a326d015c3b%3A0x47a12cd367a1f34e!2sMcDonald&#39;s!5e0!3m2!1sen!2suk!4v1699814773755!5m2!1sen!2suk"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+    <div class="wrapper">
+
+        <div class="footer__boxes">
+            <div class="footer__box">
+                <a class="footer__box-logo" href="#home"><img class="footer__box-img" src="./dist/img/icons/tree.svg"
+                        alt="">
+                    Forest</a>
+            </div>
+            <div class="footer__box-info">
+                <p class="footer__box-info-title">O nas</p>
+                <a class="footer__box-info-element" href="">Historia</a>
+                <a class="footer__box-info-element" href="">Parki</a>
+                <a class="footer__box-info-element" href="">Opinie</a>
+            </div>
+            <div class="footer__box-info show">
+                <p class="footer__box-info-title">Nasza firma</p>
+                <a class="footer__box-info-element" href="">Praca</a>
+                <a class="footer__box-info-element" href="">Kadry</a>
+                <a class="footer__box-info-element" href="">Zarząd</a>
+            </div>
+            <div class="footer__box-info">
+                <p class="footer__box-info-title">Dokumenty</p>
+                <a class="footer__box-info-element" href="">Wnioski</a>
+                <a class="footer__box-info-element" href="">Rezerwacje</a>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <p class="footer__bottom-text">&copy; <span class="date"></span> Forest Group Company Ltd.</p>
+
+</footer>
+
+
+    <script src="./dist/js/main.min.js"></script>
 </body>
 
 </html>
+
+
+
+
+
+
+
+<!-- <h3 class="contact__title">Zadzwoń do nas</h3>
+
+
+                        <p class="contact__info-text">Postaramy się odpowiedzieć na wszystkie Wasze pytania pod numerem
+                            telefonu:</p>
+                        <p class="contact__info-text--phone"><i class="fa-solid fa-phone"> </i>
+                            <b>+48 500 500 500</b>
+                        </p>
+                        <p class="contact__info-text">Jesteśmy dla Was dostępni pod tym numerem w dni:</p>
+
+                        <div class="contact__hours">
+                            <ul class="contact__days">
+                                <li class="contact__info-element">Poniedziałek</li>
+                                <li class="contact__info-element">Wtorek</li>
+                                <li class="contact__info-element">Środa</li>
+                                <li class="contact__info-element">Czwartek</b></li>
+                                <li class="contact__info-element">Piątek</li>
+                            </ul>
+                            <ul>
+                                <li class="contact__info-element"><b>8:00 - 16:00</b></li>
+                                <li class="contact__info-element"><b>8:00 - 16:00</b></li>
+                                <li class="contact__info-element"><b>8:00 - 16:00</b></li>
+                                <li class="contact__info-element"><b>8:00 - 16:00</b></li>
+                                <li class="contact__info-element"><b>8:00 - 13:00</b></li>
+                            </ul>
+                        </div> -->

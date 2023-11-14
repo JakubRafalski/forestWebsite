@@ -7,6 +7,7 @@
     <meta name="description"
         content="Poznaj najpiękniejszy park w Twojej okolicy! Dowiedz się więcej o naszej firmie - Forest Group.">
     <title>Forest | Oferta</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link
@@ -22,7 +23,7 @@
     <nav class="nav">
     <div class="nav__box">
         <div class="nav__brand">
-            <a class="nav__brand-logo" href="#"><img class="nav__brand-icon" src="./dist/img/icons/tree.svg" alt="">
+            <a class="nav__brand-logo" href="index.html#"><img class="nav__brand-icon" src="./dist/img/icons/tree.svg" alt="">
                 Forest</a>
         </div>
 
@@ -33,7 +34,7 @@
         </button>
 
         <div class="nav__items">
-            <a class="nav__item active" href="index.html#home">Home</a>
+            <a class="nav__item" href="index.html#home">Home</a>
             <a class="nav__item" href="index.html#about-us">O nas</a>
             <a class="nav__item" href="index.html#offer">Oferta</a>
             <a class="nav__item" href="kontakt.html">Kontakt</a>
@@ -41,89 +42,145 @@
     </div>
 </nav>
 
-    <header class="header" id="home">
-        <div class="header__box wrapper">
-            <p class="header__box-text">Forest Group</p>
-            <h2 class="header__box-title">Znajdź to, co przemawia do Ciebie</h2>
+    <header class="header-offer" id="home">
+        <div class="header-offer__box wrapper">
+            <p class="header-offer__box-text">Forest Group</p>
+            <h2 class="header-offer__box-title">Wybierz to, co przemawia do Ciebie</h2>
         </div>
     </header>
 
 
 
     <main>
-        <section class="section offer" id="offer">
+        <section class="section about-offer" id="about-offer">
             <div class="wrapper">
-                <h2 class="section__heading"></h2>
+                <h2 class="section__heading">Oferta</h2>
 
-                <div class="offer__box">
+                <div class="about-offer__box">
+                    <div class="about-offer__box-img">
+                        <img class="about-offer__img" src="../dist/img/tourist-small.jpg" alt="">
+                    </div>
 
+                    <div class="about-offer__box-info">
+                        <h3 class="about-offer__title">Dlaczego przygoda z nami?</h3>
+                        <p class="about-offer__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quia
+                            atque maiores quaerat eum
+                            et ab. Debitis quas ad quis pariatur provident neque, perspiciatis cum voluptate veritatis
+                            inventore. Aliquid id quia ex nesciunt magnam, voluptatum tempore sint inventore ut debitis
+                            qui eligendi possimus. Voluptas veniam nihil, atque culpa ab vel. <span
+                                class="about-offer__text-span">Aliquid id quia ex nesciunt magnam, voluptatum tempore
+                                sint inventore ut debitisqui eligendi possimus. Voluptas veniam nihil, atque culpa ab
+                                velz.</span> </p>
+                    </div>
+                </div>
+
+                <div class="about-offer__box about-offer__box--left">
+                    <div class="about-offer__box-img about-offer__box-img--left">
+                        <img class="about-offer__img" src="../dist/img/camp-small.jpg" alt="">
+                    </div>
+
+                    <div class="about-offer__box-info about-offer__box-info--left">
+                        <h3 class="about-offer__title">Jakie noclegi oraz zakwaterowanie?</h3>
+                        <p class="about-offer__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quia
+                            atque maiores quaerat eum
+                            et ab. Debitis quas ad quis pariatur provident neque, perspiciatis cum voluptate veritatis
+                            inventore. Aliquid id quia ex nesciunt magnam, voluptatum tempore sint inventore ut debitis
+                            qui eligendi possimus. Voluptas veniam nihil, atque culpa ab vel. <span
+                                class="about-offer__text-span">Aliquid id quia ex
+                                nesciunt magnam, voluptatum tempore sint inventore ut debitis
+                                qui eligendi possimus. Voluptas veniam nihil, atque culpa ab vel.</span> </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class=" section achievements" id="achievements">
+            <div class="wrapper">
+                <h2 class="section__heading">Niezawodność</h2>
+                <div class="achievements__boxes">
+                    <div class="achievements__box">
+                        <div class="achievements__box-icon">
+                            <i class="achievements__icon fa-solid fa-thumbs-up"></i>
+                        </div>
+                        <p class="achievements__title">Gwarancja dobrej zabawy</p>
+                        <p class="achievements__text">Ponad 1000 zadowolonych klientów</p>
+                    </div>
+
+                    <div class="achievements__box">
+                        <div class="achievements__box-icon">
+                            <i class="achievements__icon fa-solid fa-star"></i>
+                        </div>
+                        <p class="achievements__title">Wieloletnie doświadczenie</p>
+                        <p class="achievements__text">Ponad 10 lat na rynku</p>
+                    </div>
+
+                    <div class="achievements__box">
+                        <div class="achievements__box-icon">
+                            <i class="achievements__icon fa-solid fa-check"></i>
+                        </div>
+                        <p class="achievements__title">Profesjonalna obsługa</p>
+                        <p class="achievements__text">Starannie zaplanowane podróże</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="achievements" id="achievements">
-
-        </section>
-
-
-
-
-        <section class="section cards" id="cards">
+        <section class="section cards sec" id="cards">
             <div class="wrapper">
-                <h2 class="section__heading">Oferta</h2>
 
-                <p class="offer__subtitle">Wybierz jedną z naszych wspaniałych ofert!</p>
+                <p class="cards__subtitle">Wybierz jedną z naszych wspaniałych ofert!</p>
 
-                <div class="offer__cards">
-                    <div class="offer__card">
-                        <p class="offer__card-title">Demo</p>
-                        <p class="offer__card-price">$0</p>
+                <div class="cards__cards">
+                    <div class="cards__card">
+                        <p class="cards__card-title">Demo</p>
+                        <p class="cards__card-price">$0</p>
                         <ul>
-                            <li class="offer__card-element"><i class="fa-solid fa-check active"></i> opcja w pakiecie
+                            <li class="cards__card-element"><i class="fa-solid fa-check active"></i> opcja w pakiecie
                             </li>
-                            <li class="offer__card-element"><i class="fa-solid fa-check active"></i> opcja w pakiecie
+                            <li class="cards__card-element"><i class="fa-solid fa-check active"></i> opcja w pakiecie
                             </li>
-                            <li class="offer__card-element no-active"><i class="fa-solid fa-minus"></i> opcja poza
+                            <li class="cards__card-element no-active"><i class="fa-solid fa-minus"></i> opcja poza
                                 pakietem</li>
-                            <li class="offer__card-element no-active"><i class="fa-solid fa-minus"></i> opcja poza
+                            <li class="cards__card-element no-active"><i class="fa-solid fa-minus"></i> opcja poza
                                 pakietem</li>
-                            <li class="offer__card-element no-active"><i class="fa-solid fa-minus"></i> opcja poza
+                            <li class="cards__card-element no-active"><i class="fa-solid fa-minus"></i> opcja poza
                                 pakietem</li>
                         </ul>
-                        <div class="offer__card-button">Wybierz</div>
+                        <div class="cards__card-button">Wybierz</div>
                     </div>
 
-                    <div class="offer__card">
-                        <p class="offer__card-title">Standart</p>
-                        <p class="offer__card-price">$99</p>
+                    <div class="cards__card">
+                        <p class="cards__card-title">Standart</p>
+                        <p class="cards__card-price">$99</p>
                         <ul>
-                            <li class="offer__card-element"><i class="fa-solid fa-check active"></i> opcja w pakiecie
+                            <li class="cards__card-element"><i class="fa-solid fa-check active"></i> opcja w pakiecie
                             </li>
-                            <li class="offer__card-element"><i class="fa-solid fa-check active"></i> opcja w pakiecie
+                            <li class="cards__card-element"><i class="fa-solid fa-check active"></i> opcja w pakiecie
                             </li>
-                            <li class="offer__card-element"><i class="fa-solid fa-check active"></i> opcja poza pakietem
+                            <li class="cards__card-element"><i class="fa-solid fa-check active"></i> opcja poza pakietem
                             </li>
-                            <li class="offer__card-element no-active"><i class="fa-solid fa-minus"></i> opcja poza
+                            <li class="cards__card-element no-active"><i class="fa-solid fa-minus"></i> opcja poza
                                 pakietem</li>
-                            <li class="offer__card-element no-active"><i class="fa-solid fa-minus"></i> opcja poza
+                            <li class="cards__card-element no-active"><i class="fa-solid fa-minus"></i> opcja poza
                                 pakietem</li>
                         </ul>
-                        <div class="offer__card-button--popular">Wybierz</div>
+                        <div class="cards__card-button--popular">Wybierz</div>
                     </div>
 
-                    <div class="offer__card">
-                        <p class="offer__card-title">Premium</p>
-                        <p class="offer__card-price">$299</p>
+                    <div class="cards__card">
+                        <p class="cards__card-title">Premium</p>
+                        <p class="cards__card-price">$299</p>
                         <ul>
-                            <li class="offer__card-element"><i class="fa-solid fa-check active"></i> opcja w pakiecie
+                            <li class="cards__card-element"><i class="fa-solid fa-check active"></i> opcja w pakiecie
                             </li>
-                            <li class="offer__card-element"><i class="fa-solid fa-check active"></i> opcja w pakiecie
+                            <li class="cards__card-element"><i class="fa-solid fa-check active"></i> opcja w pakiecie
                             </li>
-                            <li class="offer__card-element"><i class="fa-solid fa-check active"></i> opcja poza pakietem
+                            <li class="cards__card-element"><i class="fa-solid fa-check active"></i> opcja poza pakietem
                             </li>
-                            <li class="offer__card-element"><i class="fa-solid fa-check active"></i> opcja poza pakietem
+                            <li class="cards__card-element"><i class="fa-solid fa-check active"></i> opcja poza pakietem
                             </li>
-                            <li class="offer__card-element"><i class="fa-solid fa-check active"></i> opcja poza pakietem
+                            <li class="cards__card-element"><i class="fa-solid fa-check active"></i> opcja poza pakietem
                             </li>
                         </ul>
                         <div class="offer__card-button ">Wybierz</div>
@@ -131,7 +188,17 @@
                 </div>
 
             </div>
+
         </section>
+
+
+
+
+        
+
+
+
+
     </main>
 
     <footer class="footer">
