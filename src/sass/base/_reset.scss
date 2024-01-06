@@ -11,7 +11,7 @@
 html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
-	scroll-padding-top: 83px;
+	scroll-padding-top: 82.5px;
 }
 
 body {
@@ -20,3 +20,26 @@ body {
 	font-size: 1.6rem;
 }
 
+a {
+	text-decoration: none;
+}
+
+img {
+	height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+	font-family: inherit;
+}
+
+textarea {
+	resize: vertical;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}

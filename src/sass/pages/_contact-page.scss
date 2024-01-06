@@ -31,18 +31,21 @@
 	&__days {
 		margin-right: 0.5em;
 	}
+
 	&__hours {
 		display: flex;
 	}
+
 	&__info {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: space-between;
 		align-items: center;
 		width: 100%;
-		margin-bottom: 3em;
-		padding: 20px;
+		padding: 2em 1em;
 		box-shadow: 0 0 5px black;
+		max-height: 600px;
+		margin-bottom: 3em;
 		border-radius: 8px;
 		transition: transform 0.3s;
 
@@ -51,8 +54,15 @@
 		}
 	}
 	&__info-icon {
-		font-size: 2.6rem;
+		font-size: 2rem;
 		margin-bottom: 0.3em;
+	}
+
+	&__box-info {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 1em;
 	}
 
 	&__info-text {
@@ -103,6 +113,7 @@
 		min-width: 100%;
 		max-width: 100%;
 		min-height: 150px;
+		max-height: 600px;
 		font-family: 'Raleway', sans-serif;
 		border-radius: 5px;
 	}
@@ -200,3 +211,4 @@
 		}
 	}
 }
+

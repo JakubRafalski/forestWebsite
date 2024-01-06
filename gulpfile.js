@@ -19,11 +19,12 @@ const paths = {
 	js: './src/js/**/*.js',
 	img: './src/img/*',
 	icons: './src/img/icons/*.svg',
+	favicon: './src/img/icons/*.ico',
 	dist: './dist',
 	sassDest: './dist/css',
 	jsDest: './dist/js',
 	imgDest: './dist/img',
-	svgDest: './dist/img/icons',
+	iconsDest: './dist/img/icons',
 };
 
 function sassCompiler(done) {
@@ -55,7 +56,12 @@ function convertImages(done) {
 }
 
 function copySvg(done) {
-	src(paths.icons).pipe(dest(paths.svgDest));
+	src(paths.icons).pipe(dest(paths.iconsDest));
+	done();
+}
+
+function copyFavicon(done) {
+	src(paths.favicon).pipe(dest(paths.iconsDest));
 	done();
 }
 
@@ -84,7 +90,7 @@ function watchForChanges(done) {
 	watch(
 		[paths.html, paths.sass, paths.js],
 		parallel(handleKits, sassCompiler, javaScript)
-	).on('change', reload); 
+	).on('change', reload);
 	watch(paths.img, convertImages).on('change', reload);
 	done();
 }
@@ -94,7 +100,8 @@ const mainFunctions = parallel(
 	sassCompiler,
 	javaScript,
 	convertImages,
-	copySvg
+	copySvg,
+	copyFavicon
 );
 exports.cleanStuff = cleanStuff;
 exports.default = series(mainFunctions, startBrowserSync, watchForChanges);

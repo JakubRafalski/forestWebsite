@@ -6,7 +6,7 @@ const handleScrollSpy = () => {
 		const sections = [];
 
 		scrollSpySections.forEach((section) => {
-			if (window.scrollY <= section.offsetTop + section.offsetHeight - 83.2) {
+			if (window.scrollY <= section.offsetTop + section.offsetHeight - 83.4) {
 				sections.push(section);
 
 				const activeSection = document.querySelector(
